@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{NAME}} | {{TAGLINE}} in {{CITY}}</title>
+<meta name="description" content="{{INTRO_SHORT}}">
+<meta property="og:title" content="{{NAME}}">
+<meta property="og:description" content="{{INTRO_SHORT}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">{{JSONLD}}</script>
+</head>
+<body>
+<a class="skip" href="#find">Skip to the clinic finder</a>
+{{DEMOBAR}}
+
+<header class="nav" id="nav"><div class="shell">
+  <a class="logo" href="#top"><span class="m">{{SHORT}}</span><span class="s">Community Health</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="#find">Find a clinic</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cost">Cost &amp; insurance</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a class="btn fill" href="tel:{{MAINPHONE_RAW}}">{{MAINPHONE}}</a>
+</div></header>
+
+<header class="hero" id="top">
+  <img src="assets/img/hero.webp" alt="" width="1500" height="1000" fetchpriority="high">
+  <div class="inner"><div class="shell">
+    <p class="eyebrow">{{TAGLINE}} &middot; {{CITY}}</p>
+    <h1>Care near you, whatever you can pay.</h1>
+    <p>{{INTRO}}</p>
+    <div class="cta">
+      <a class="btn light" href="#find">Find your nearest clinic</a>
+      <a class="btn light" href="#cost">What it costs</a>
+    </div>
+  </div></div>
+</header>
+
+<main>
+
+<section class="section" id="find"><div class="shell">
+  <div class="head rv">
+    <p class="eyebrow">Find a clinic</p>
+    <h2>{{N_LOCS}} clinics, {{N_SVCS}} services</h2>
+    <p>Not every clinic offers every service, so search by what you need. Opening status is worked out from your own clock, not written into the page.</p>
+  </div>
+
+  <div class="finder rv" role="group" aria-label="Find a clinic">
+    <div class="f">
+      <label for="f-zip">Your ZIP code</label>
+      <input id="f-zip" inputmode="numeric" maxlength="5" placeholder="60608" autocomplete="postal-code">
+    </div>
+    <div class="f">
+      <label for="f-service">Service you need</label>
+      <select id="f-service"><option value="">Any service</option>{{SVC_OPTS}}</select>
+    </div>
+    <div class="acts">
+      <button class="btn" type="button" id="useMe">Use my location</button>
+      <button class="btn" type="button" id="reset">Reset</button>
+    </div>
+    <p class="geo-msg" id="geoMsg" aria-live="polite"></p>
+  </div>
+
+  <div class="result-line">
+    <span><b id="count">0</b> <span id="countWord">clinics</span> <span id="nearNote"></span></span>
+  </div>
+
+  <div class="browse">
+    <div>
+      <div class="locs" id="locs">{{LOCS}}</div>
+      <p class="empty" id="emptyState" hidden>No clinic offers that service. Call {{MAINPHONE}} and we will refer you to a partner site.</p>
+    </div>
+    <div id="map" role="region" aria-label="Map of clinics"></div>
+  </div>
+</div></section>
+
+<section class="section section-alt" id="services"><div class="shell">
+  <div class="head rv"><p class="eyebrow">Services</p><h2>What we do, and where</h2>
+    <p>Each card says which clinics offer it, because the most frustrating thing about a clinic network is turning up at the wrong site.</p></div>
+  <div class="svc-grid">{{SVC_CARDS}}</div>
+</div></section>
+
+<section class="section" id="cost"><div class="shell split">
+  <div class="im rv"><img src="assets/img/visit.webp" alt="" loading="lazy" width="1000" height="750"></div>
+  <div class="rv">
+    <p class="eyebrow">Cost &amp; insurance</p>
+    <h2>Nobody is turned away</h2>
+    <p>We take Medicaid, Medicare and most commercial plans. If you have no insurance, you pay on a sliding scale based on household size and income, starting at $25 a visit.</p>
+    <p>Bring photo ID and proof of income if you have them. If you do not have them, come anyway and we will work it out at the desk.</p>
+    <a class="btn fill" href="tel:{{MAINPHONE_RAW}}">Ask about cost</a>
+  </div>
+</div></section>
+
+<section class="section deep" id="contact"><div class="shell">
+  <div class="head rv"><p class="eyebrow">Contact</p><h2>Get in touch</h2>
+    <p>One number reaches every clinic. If you are having a medical emergency, call 911 instead.</p></div>
+  <div class="info">
+    <div class="rv"><h4>Main line</h4><p><a href="tel:{{MAINPHONE_RAW}}">{{MAINPHONE}}</a></p><p>Monday to Friday, 8am to 6pm</p></div>
+    <div class="rv"><h4>Email</h4><p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p><p>We reply within two business days.</p></div>
+    <div class="rv"><h4>Emergencies</h4><p>Call 911, or go to the nearest emergency room.</p></div>
+  </div>
+</div></section>
+
+</main>
+
+{{DEMOFOOT}}
+<footer><div class="shell">
+  <span>&copy; <span id="yr">2026</span> {{NAME}}</span>
+  <span>{{N_LOCS}} clinics across {{CITY}}</span>
+  <span><a href="tel:{{MAINPHONE_RAW}}">{{MAINPHONE}}</a></span>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+{{SCRIPT}}
+</body>
+</html>

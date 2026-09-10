@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Willow Community Health | Six neighborhood clinics in Chicago</title>
+<meta name="description" content="Six clinics across the city.">
+<meta property="og:title" content="Willow Community Health">
+<meta property="og:description" content="Six clinics across the city.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Pilsen","telephone":"(555) 555-0101","address":{"@type":"PostalAddress","streetAddress":"1800 S Blue Island Ave","addressLocality":"Chicago","postalCode":"60608"},"geo":{"@type":"GeoCoordinates","latitude":41.857,"longitude":-87.658},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Pediatrics"},{"@type":"MedicalTherapy","name":"Dental"},{"@type":"MedicalTherapy","name":"Behavioral health"},{"@type":"MedicalTherapy","name":"Women's health"},{"@type":"MedicalTherapy","name":"Pharmacy"},{"@type":"MedicalTherapy","name":"Walk-in care"}]},{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Uptown","telephone":"(555) 555-0102","address":{"@type":"PostalAddress","streetAddress":"4700 N Sheridan Rd","addressLocality":"Chicago","postalCode":"60640"},"geo":{"@type":"GeoCoordinates","latitude":41.968,"longitude":-87.655},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Behavioral health"},{"@type":"MedicalTherapy","name":"Women's health"},{"@type":"MedicalTherapy","name":"Pharmacy"},{"@type":"MedicalTherapy","name":"Vision"},{"@type":"MedicalTherapy","name":"Walk-in care"}]},{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Austin","telephone":"(555) 555-0103","address":{"@type":"PostalAddress","streetAddress":"5900 W Chicago Ave","addressLocality":"Chicago","postalCode":"60651"},"geo":{"@type":"GeoCoordinates","latitude":41.8945,"longitude":-87.772},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Pediatrics"},{"@type":"MedicalTherapy","name":"Dental"},{"@type":"MedicalTherapy","name":"Behavioral health"},{"@type":"MedicalTherapy","name":"Pharmacy"}]},{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Bronzeville","telephone":"(555) 555-0104","address":{"@type":"PostalAddress","streetAddress":"400 E 47th St","addressLocality":"Chicago","postalCode":"60653"},"geo":{"@type":"GeoCoordinates","latitude":41.8095,"longitude":-87.6165},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Pediatrics"},{"@type":"MedicalTherapy","name":"Women's health"},{"@type":"MedicalTherapy","name":"Behavioral health"},{"@type":"MedicalTherapy","name":"Vision"},{"@type":"MedicalTherapy","name":"Walk-in care"}]},{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Belmont Cragin","telephone":"(555) 555-0105","address":{"@type":"PostalAddress","streetAddress":"5400 W Fullerton Ave","addressLocality":"Chicago","postalCode":"60639"},"geo":{"@type":"GeoCoordinates","latitude":41.924,"longitude":-87.76},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Pediatrics"},{"@type":"MedicalTherapy","name":"Dental"},{"@type":"MedicalTherapy","name":"Pharmacy"},{"@type":"MedicalTherapy","name":"Vision"}]},{"@context":"https://schema.org","@type":"MedicalClinic","name":"Willow Community Health — Rogers Park","telephone":"(555) 555-0106","address":{"@type":"PostalAddress","streetAddress":"1700 W Devon Ave","addressLocality":"Chicago","postalCode":"60660"},"geo":{"@type":"GeoCoordinates","latitude":41.998,"longitude":-87.674},"availableService":[{"@type":"MedicalTherapy","name":"Primary care"},{"@type":"MedicalTherapy","name":"Pediatrics"},{"@type":"MedicalTherapy","name":"Behavioral health"},{"@type":"MedicalTherapy","name":"Women's health"},{"@type":"MedicalTherapy","name":"Walk-in care"}]}]</script>
+</head>
+<body>
+<a class="skip" href="#find">Skip to the clinic finder</a>
+<div class="demo-bar" role="note"><p>Demo site. Willow Community Health is fictional; clinics, hours and phone numbers are invented.</p><span class="sep">&middot;</span>
+  <a href="https://tahvia127.github.io/framework-studio/" target="_blank" rel="noopener noreferrer">Made by Framework Studio</a></div>
+
+<header class="nav" id="nav"><div class="shell">
+  <a class="logo" href="#top"><span class="m">Willow</span><span class="s">Community Health</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="#find">Find a clinic</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cost">Cost &amp; insurance</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a class="btn fill" href="tel:5555550100">(555) 555-0100</a>
+</div></header>
+
+<header class="hero" id="top">
+  <img src="assets/img/hero.webp" alt="" width="1500" height="1000" fetchpriority="high">
+  <div class="inner"><div class="shell">
+    <p class="eyebrow">Six neighborhood clinics &middot; Chicago</p>
+    <h1>Care near you, whatever you can pay.</h1>
+    <p>Six clinics across the city. We take Medicaid, Medicare, most commercial plans, and we see people with no insurance on a sliding scale. Nobody is turned away for inability to pay.</p>
+    <div class="cta">
+      <a class="btn light" href="#find">Find your nearest clinic</a>
+      <a class="btn light" href="#cost">What it costs</a>
+    </div>
+  </div></div>
+</header>
+
+<main>
+
+<section class="section" id="find"><div class="shell">
+  <div class="head rv">
+    <p class="eyebrow">Find a clinic</p>
+    <h2>6 clinics, 8 services</h2>
+    <p>Not every clinic offers every service, so search by what you need. Opening status is worked out from your own clock, not written into the page.</p>
+  </div>
+
+  <div class="finder rv" role="group" aria-label="Find a clinic">
+    <div class="f">
+      <label for="f-zip">Your ZIP code</label>
+      <input id="f-zip" inputmode="numeric" maxlength="5" placeholder="60608" autocomplete="postal-code">
+    </div>
+    <div class="f">
+      <label for="f-service">Service you need</label>
+      <select id="f-service"><option value="">Any service</option><option value="primary">Primary care</option><option value="peds">Pediatrics</option><option value="dental">Dental</option><option value="behavioral">Behavioral health</option><option value="womens">Women's health</option><option value="pharmacy">Pharmacy</option><option value="vision">Vision</option><option value="walkin">Walk-in care</option></select>
+    </div>
+    <div class="acts">
+      <button class="btn" type="button" id="useMe">Use my location</button>
+      <button class="btn" type="button" id="reset">Reset</button>
+    </div>
+    <p class="geo-msg" id="geoMsg" aria-live="polite"></p>
+  </div>
+
+  <div class="result-line">
+    <span><b id="count">0</b> <span id="countWord">clinics</span> <span id="nearNote"></span></span>
+  </div>
+
+  <div class="browse">
+    <div>
+      <div class="locs" id="locs">
+      <article class="loc rv" data-id="pilsen" data-lat="41.857" data-lng="-87.658"
+               data-services="primary peds dental behavioral womens pharmacy walkin">
+        <div class="top">
+          <div>
+            <h3>Pilsen</h3>
+            <p class="addr">1800 S Blue Island Ave, Chicago 60608</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="peds">Pediatrics</li><li data-s="dental">Dental</li><li data-s="behavioral">Behavioral health</li><li data-s="womens">Women's health</li><li data-s="pharmacy">Pharmacy</li><li data-s="walkin">Walk-in care</li></ul>
+        <p class="note">Spanish spoken at every desk.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550101">(555) 555-0101</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.857&mlon=-87.658#map=17/41.857/-87.658"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Pilsen</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>8am to 7pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8am to 7pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8am to 7pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8am to 7pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8am to 5pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>9am to 2pm</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="loc rv" data-id="uptown" data-lat="41.968" data-lng="-87.655"
+               data-services="primary behavioral womens pharmacy vision walkin">
+        <div class="top">
+          <div>
+            <h3>Uptown</h3>
+            <p class="addr">4700 N Sheridan Rd, Chicago 60640</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="behavioral">Behavioral health</li><li data-s="womens">Women's health</li><li data-s="pharmacy">Pharmacy</li><li data-s="vision">Vision</li><li data-s="walkin">Walk-in care</li></ul>
+        <p class="note">Interpretation available in Vietnamese and Amharic.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550102">(555) 555-0102</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.968&mlon=-87.655#map=17/41.968/-87.655"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Uptown</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>7:30am to 8pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7:30am to 8pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7:30am to 8pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7:30am to 8pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7:30am to 6pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>9am to 3pm</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="loc rv" data-id="austin" data-lat="41.8945" data-lng="-87.772"
+               data-services="primary peds dental behavioral pharmacy">
+        <div class="top">
+          <div>
+            <h3>Austin</h3>
+            <p class="addr">5900 W Chicago Ave, Chicago 60651</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="peds">Pediatrics</li><li data-s="dental">Dental</li><li data-s="behavioral">Behavioral health</li><li data-s="pharmacy">Pharmacy</li></ul>
+        <p class="note">Free shuttle from the Central Green Line stop.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550103">(555) 555-0103</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.8945&mlon=-87.772#map=17/41.8945/-87.772"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Austin</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>8am to 6pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8am to 6pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8am to 6pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8am to 6pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8am to 4pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="loc rv" data-id="bronzeville" data-lat="41.8095" data-lng="-87.6165"
+               data-services="primary peds womens behavioral vision walkin">
+        <div class="top">
+          <div>
+            <h3>Bronzeville</h3>
+            <p class="addr">400 E 47th St, Chicago 60653</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="peds">Pediatrics</li><li data-s="womens">Women's health</li><li data-s="behavioral">Behavioral health</li><li data-s="vision">Vision</li><li data-s="walkin">Walk-in care</li></ul>
+        <p class="note">Open Sunday mornings for walk-ins.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550104">(555) 555-0104</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.8095&mlon=-87.6165#map=17/41.8095/-87.6165"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Bronzeville</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>10am to 2pm</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>8am to 7pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8am to 7pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8am to 7pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8am to 7pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8am to 5pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>9am to 3pm</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="loc rv" data-id="belmont" data-lat="41.924" data-lng="-87.76"
+               data-services="primary peds dental pharmacy vision">
+        <div class="top">
+          <div>
+            <h3>Belmont Cragin</h3>
+            <p class="addr">5400 W Fullerton Ave, Chicago 60639</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="peds">Pediatrics</li><li data-s="dental">Dental</li><li data-s="pharmacy">Pharmacy</li><li data-s="vision">Vision</li></ul>
+        <p class="note">Spanish and Polish spoken.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550105">(555) 555-0105</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.924&mlon=-87.76#map=17/41.924/-87.76"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Belmont Cragin</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>8:30am to 6pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8:30am to 6pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8:30am to 6pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8:30am to 6pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8:30am to 4pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="loc rv" data-id="rogers" data-lat="41.998" data-lng="-87.674"
+               data-services="primary peds behavioral womens walkin">
+        <div class="top">
+          <div>
+            <h3>Rogers Park</h3>
+            <p class="addr">1700 W Devon Ave, Chicago 60660</p>
+          </div>
+          <span class="dist" data-dist hidden></span>
+        </div>
+        <p class="status" data-status></p>
+        <ul class="chips"><li data-s="primary">Primary care</li><li data-s="peds">Pediatrics</li><li data-s="behavioral">Behavioral health</li><li data-s="womens">Women's health</li><li data-s="walkin">Walk-in care</li></ul>
+        <p class="note">Interpretation in Urdu, Gujarati and Russian.</p>
+        <div class="acts">
+          <a class="btn sm fill" href="tel:5555550106">(555) 555-0106</a>
+          <a class="btn sm" href="https://www.openstreetmap.org/?mlat=41.998&mlon=-87.674#map=17/41.998/-87.674"
+             target="_blank" rel="noopener noreferrer">Directions</a>
+          <button class="hrs-toggle" type="button" aria-expanded="false">Opening hours</button>
+        </div>
+        <table class="hrs" hidden>
+          <caption class="vh">Opening hours for Rogers Park</caption>
+          <tbody>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>8am to 6pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>8am to 6pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>8am to 6pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>8am to 6pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>8am to 4pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>10am to 2pm</td></tr>
+          </tbody>
+        </table>
+      </article></div>
+      <p class="empty" id="emptyState" hidden>No clinic offers that service. Call (555) 555-0100 and we will refer you to a partner site.</p>
+    </div>
+    <div id="map" role="region" aria-label="Map of clinics"></div>
+  </div>
+</div></section>
+
+<section class="section section-alt" id="services"><div class="shell">
+  <div class="head rv"><p class="eyebrow">Services</p><h2>What we do, and where</h2>
+    <p>Each card says which clinics offer it, because the most frustrating thing about a clinic network is turning up at the wrong site.</p></div>
+  <div class="svc-grid">
+      <article class="svc rv">
+        <h3>Primary care</h3>
+        <p>Check-ups, chronic conditions, referrals, and the same doctor each visit where we can manage it.</p>
+        <p class="at">At <b>6</b> of 6 clinics: Pilsen, Uptown, Austin, Bronzeville, Belmont Cragin, Rogers Park</p>
+      </article>
+      <article class="svc rv">
+        <h3>Pediatrics</h3>
+        <p>Newborn through eighteen, school and sports physicals, immunisations.</p>
+        <p class="at">At <b>5</b> of 6 clinics: Pilsen, Austin, Bronzeville, Belmont Cragin, Rogers Park</p>
+      </article>
+      <article class="svc rv">
+        <h3>Dental</h3>
+        <p>Cleanings, fillings, extractions and dentures. Sliding scale applies here too.</p>
+        <p class="at">At <b>3</b> of 6 clinics: Pilsen, Austin, Belmont Cragin</p>
+      </article>
+      <article class="svc rv">
+        <h3>Behavioral health</h3>
+        <p>Individual counselling, psychiatry, and substance use treatment. Same-week intake.</p>
+        <p class="at">At <b>5</b> of 6 clinics: Pilsen, Uptown, Austin, Bronzeville, Rogers Park</p>
+      </article>
+      <article class="svc rv">
+        <h3>Women's health</h3>
+        <p>Prenatal care, family planning, screening and gynecology.</p>
+        <p class="at">At <b>4</b> of 6 clinics: Pilsen, Uptown, Bronzeville, Rogers Park</p>
+      </article>
+      <article class="svc rv">
+        <h3>Pharmacy</h3>
+        <p>On-site pharmacy with 340B pricing for eligible patients.</p>
+        <p class="at">At <b>4</b> of 6 clinics: Pilsen, Uptown, Austin, Belmont Cragin</p>
+      </article>
+      <article class="svc rv">
+        <h3>Vision</h3>
+        <p>Eye exams and glasses, including the paediatric vision screening schools ask for.</p>
+        <p class="at">At <b>3</b> of 6 clinics: Uptown, Bronzeville, Belmont Cragin</p>
+      </article>
+      <article class="svc rv">
+        <h3>Walk-in care</h3>
+        <p>No appointment. Colds, sprains, rashes, infections, stitches.</p>
+        <p class="at">At <b>4</b> of 6 clinics: Pilsen, Uptown, Bronzeville, Rogers Park</p>
+      </article></div>
+</div></section>
+
+<section class="section" id="cost"><div class="shell split">
+  <div class="im rv"><img src="assets/img/visit.webp" alt="" loading="lazy" width="1000" height="750"></div>
+  <div class="rv">
+    <p class="eyebrow">Cost &amp; insurance</p>
+    <h2>Nobody is turned away</h2>
+    <p>We take Medicaid, Medicare and most commercial plans. If you have no insurance, you pay on a sliding scale based on household size and income, starting at $25 a visit.</p>
+    <p>Bring photo ID and proof of income if you have them. If you do not have them, come anyway and we will work it out at the desk.</p>
+    <a class="btn fill" href="tel:5555550100">Ask about cost</a>
+  </div>
+</div></section>
+
+<section class="section deep" id="contact"><div class="shell">
+  <div class="head rv"><p class="eyebrow">Contact</p><h2>Get in touch</h2>
+    <p>One number reaches every clinic. If you are having a medical emergency, call 911 instead.</p></div>
+  <div class="info">
+    <div class="rv"><h4>Main line</h4><p><a href="tel:5555550100">(555) 555-0100</a></p><p>Monday to Friday, 8am to 6pm</p></div>
+    <div class="rv"><h4>Email</h4><p><a href="mailto:hello@willowhealth.example">hello@willowhealth.example</a></p><p>We reply within two business days.</p></div>
+    <div class="rv"><h4>Emergencies</h4><p>Call 911, or go to the nearest emergency room.</p></div>
+  </div>
+</div></section>
+
+</main>
+
+<div class="demo-foot">Demo site. Willow Community Health is fictional; clinics, hours and phone numbers are invented.
+  <a href="https://tahvia127.github.io/framework-studio/" target="_blank" rel="noopener noreferrer">Made by Framework Studio</a></div>
+<footer><div class="shell">
+  <span>&copy; <span id="yr">2026</span> Willow Community Health</span>
+  <span>6 clinics across Chicago</span>
+  <span><a href="tel:5555550100">(555) 555-0100</a></span>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+var LOCS=[{"id":"pilsen","name":"Pilsen","lat":41.857,"lng":-87.658,"hours":[null,["08:00","19:00"],["08:00","19:00"],["08:00","19:00"],["08:00","19:00"],["08:00","17:00"],["09:00","14:00"]]},{"id":"uptown","name":"Uptown","lat":41.968,"lng":-87.655,"hours":[null,["07:30","20:00"],["07:30","20:00"],["07:30","20:00"],["07:30","20:00"],["07:30","18:00"],["09:00","15:00"]]},{"id":"austin","name":"Austin","lat":41.8945,"lng":-87.772,"hours":[null,["08:00","18:00"],["08:00","18:00"],["08:00","18:00"],["08:00","18:00"],["08:00","16:00"],null]},{"id":"bronzeville","name":"Bronzeville","lat":41.8095,"lng":-87.6165,"hours":[["10:00","14:00"],["08:00","19:00"],["08:00","19:00"],["08:00","19:00"],["08:00","19:00"],["08:00","17:00"],["09:00","15:00"]]},{"id":"belmont","name":"Belmont Cragin","lat":41.924,"lng":-87.76,"hours":[null,["08:30","18:00"],["08:30","18:00"],["08:30","18:00"],["08:30","18:00"],["08:30","16:00"],null]},{"id":"rogers","name":"Rogers Park","lat":41.998,"lng":-87.674,"hours":[null,["08:00","18:00"],["08:00","18:00"],["08:00","18:00"],["08:00","18:00"],["08:00","16:00"],["10:00","14:00"]]}];
+var ZIPS={"60601":[41.8858,-87.6229],"60605":[41.8672,-87.6265],"60607":[41.8747,-87.6516],"60608":[41.8494,-87.6712],"60609":[41.8115,-87.656],"60612":[41.8804,-87.6871],"60613":[41.954,-87.657],"60614":[41.9227,-87.654],"60616":[41.848,-87.63],"60618":[41.9463,-87.702],"60619":[41.743,-87.605],"60620":[41.741,-87.654],"60622":[41.902,-87.68],"60623":[41.848,-87.718],"60625":[41.974,-87.699],"60626":[41.9995,-87.669],"60629":[41.776,-87.701],"60630":[41.97,-87.757],"60632":[41.809,-87.712],"60636":[41.776,-87.666],"60637":[41.78,-87.6],"60639":[41.923,-87.756],"60640":[41.972,-87.662],"60641":[41.946,-87.747],"60644":[41.883,-87.759],"60647":[41.921,-87.7],"60649":[41.76,-87.572],"60651":[41.902,-87.74],"60653":[41.82,-87.61],"60657":[41.94,-87.654],"60660":[41.991,-87.665],"60661":[41.883,-87.644]};
+document.getElementById('yr').textContent=new Date().getFullYear();
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>12)},{passive:true});
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.05});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+
+var $=function(s){return document.querySelector(s)}, $$=function(s){return [].slice.call(document.querySelectorAll(s))};
+var cards=$$('.loc'), origin=null;
+
+/* ---------- open now, from the visitor's actual clock ---------- */
+function openState(hours){
+  var now=new Date(), day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  function toM(s){ var p=s.split(':'); return +p[0]*60 + +p[1] }
+  var today=hours[day];
+  if(today && mins>=toM(today[0]) && mins<toM(today[1]))
+    return {open:true, text:'Open now, until '+fmt(today[1])};
+  if(today && mins<toM(today[0]))
+    return {open:false, text:'Closed, opens '+fmt(today[0])};
+  for(var i=1;i<=7;i++){
+    var n=(day+i)%7, h=hours[n];
+    if(h) return {open:false, text:'Closed, opens '+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][n]+' '+fmt(h[0])};
+  }
+  return {open:false, text:'Closed'};
+}
+function fmt(t){ var p=t.split(':'),H=+p[0],M=+p[1],ap=H>=12?'pm':'am',h=H%12||12;
+  return M? h+':'+String(M).padStart(2,'0')+ap : h+ap }
+
+cards.forEach(function(c){
+  var L=LOCS.filter(function(x){return x.id===c.dataset.id})[0];
+  var st=openState(L.hours), el=c.querySelector('[data-status]');
+  el.textContent=st.text; el.classList.add(st.open?'open':'shut');
+  var today=new Date().getDay();
+  var row=c.querySelector('.hrs tr[data-day="'+today+'"]'); if(row) row.classList.add('today');
+});
+
+/* ---------- hours disclosure ---------- */
+$$('.hrs-toggle').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.loc').querySelector('.hrs');
+    var open=t.hidden; t.hidden=!open; b.setAttribute('aria-expanded',String(open));
+    b.textContent = open ? 'Hide hours' : 'Opening hours';
+  });
+});
+
+/* ---------- distance ---------- */
+function haversine(a,b,c,d){
+  var R=3958.8, p=Math.PI/180;
+  var dLat=(c-a)*p, dLng=(d-b)*p;
+  var s=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(a*p)*Math.cos(c*p)*Math.sin(dLng/2)*Math.sin(dLng/2);
+  return R*2*Math.atan2(Math.sqrt(s),Math.sqrt(1-s));
+}
+
+/* ---------- map ---------- */
+var map=null, markers={};
+if(window.L && L.map){
+  map=L.map('map',{scrollWheelZoom:false}).setView([41.89,-87.68],10.6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,
+    attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  LOCS.forEach(function(p){
+    var m=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',
+      html:'<span class="pin" data-id="'+p.id+'">'+p.name+'</span>',iconSize:null})}).addTo(map);
+    m.on('click',function(){ focus(p.id,true) });
+    markers[p.id]=m;
+  });
+}
+function focus(id,scroll){
+  cards.forEach(function(c){ c.classList.toggle('hl', c.dataset.id===id) });
+  $$('.pin').forEach(function(p){ p.classList.toggle('on', p.dataset.id===id) });
+  var card=document.querySelector('.loc[data-id="'+id+'"]');
+  if(scroll && card && !card.hidden) card.scrollIntoView({behavior:'smooth',block:'center'});
+}
+cards.forEach(function(c){ c.addEventListener('click',function(e){
+  if(e.target.closest('a,button')) return; focus(c.dataset.id) }) });
+
+/* ---------- render ---------- */
+function render(){
+  var want=$('#f-service').value;
+  var shown=[];
+  cards.forEach(function(c){
+    var ok = !want || c.dataset.services.split(' ').indexOf(want)>-1;
+    c.hidden=!ok;
+    c.querySelectorAll('.chips li').forEach(function(li){ li.classList.toggle('hit', !!want && li.dataset.s===want) });
+    if(ok) shown.push(c);
+  });
+  if(origin){
+    shown.forEach(function(c){
+      var mi=haversine(origin[0],origin[1],+c.dataset.lat,+c.dataset.lng);
+      c.dataset.mi=mi;
+      var el=c.querySelector('[data-dist]');
+      el.hidden=false; el.textContent=mi.toFixed(1)+' mi';
+    });
+    shown.sort(function(a,b){ return a.dataset.mi-b.dataset.mi });
+    var wrap=$('#locs'); shown.forEach(function(c){ wrap.appendChild(c) });
+  } else {
+    cards.forEach(function(c){ c.querySelector('[data-dist]').hidden=true });
+  }
+  $('#count').textContent=shown.length;
+  $('#countWord').textContent = shown.length===1?'clinic':'clinics';
+  $('#nearNote').textContent = origin ? 'sorted by distance' : '';
+  $('#emptyState').hidden = shown.length>0;
+  if(map){
+    var ids={}; shown.forEach(function(c){ids[c.dataset.id]=1});
+    Object.keys(markers).forEach(function(id){
+      var m=markers[id];
+      if(ids[id]){ if(!map.hasLayer(m)) m.addTo(map) } else if(map.hasLayer(m)) map.removeLayer(m);
+    });
+    var pts=shown.map(function(c){return [+c.dataset.lat,+c.dataset.lng]});
+    if(origin) pts.push(origin);
+    if(pts.length) map.fitBounds(pts,{padding:[40,40],maxZoom:13});
+  }
+}
+$('#f-service').addEventListener('change',render);
+
+$('#f-zip').addEventListener('input',function(){
+  var z=this.value.trim();
+  this.classList.remove('err');
+  if(z.length===5){
+    if(ZIPS[z]){ origin=ZIPS[z]; $('#geoMsg').textContent='Showing clinics near '+z+'.'; render() }
+    else { this.classList.add('err'); $('#geoMsg').textContent='We do not have a centroid for '+z+'. Try a Chicago ZIP.' }
+  } else if(z.length===0){ origin=null; $('#geoMsg').textContent=''; render() }
+});
+$('#useMe').addEventListener('click',function(){
+  if(!navigator.geolocation){ $('#geoMsg').textContent='This browser will not share a location.'; return }
+  var b=this; b.textContent='Locating…';
+  navigator.geolocation.getCurrentPosition(function(p){
+    origin=[p.coords.latitude,p.coords.longitude];
+    $('#f-zip').value=''; $('#geoMsg').textContent='Showing clinics near you.';
+    b.textContent='Use my location'; render();
+  },function(){
+    $('#geoMsg').textContent='Could not get your location. Enter a ZIP instead.';
+    b.textContent='Use my location';
+  },{timeout:8000});
+});
+$('#reset').addEventListener('click',function(){
+  origin=null; $('#f-zip').value=''; $('#f-zip').classList.remove('err');
+  $('#f-service').value=''; $('#geoMsg').textContent=''; render();
+});
+render();
+</script>
+</body>
+</html>

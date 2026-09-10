@@ -1,0 +1,12 @@
+{
+  "services": [
+    { "id": "primary",   "name": "Primary care",        "blurb": "Check-ups, chronic conditions, referrals, and the same doctor each visit where we can manage it." },
+    { "id": "peds",      "name": "Pediatrics",          "blurb": "Newborn through eighteen, school and sports physicals, immunisations." },
+    { "id": "dental",    "name": "Dental",              "blurb": "Cleanings, fillings, extractions and dentures. Sliding scale applies here too." },
+    { "id": "behavioral","name": "Behavioral health",   "blurb": "Individual counselling, psychiatry, and substance use treatment. Same-week intake." },
+    { "id": "womens",    "name": "Women's health",      "blurb": "Prenatal care, family planning, screening and gynecology." },
+    { "id": "pharmacy",  "name": "Pharmacy",            "blurb": "On-site pharmacy with 340B pricing for eligible patients." },
+    { "id": "vision",    "name": "Vision",              "blurb": "Eye exams and glasses, including the paediatric vision screening schools ask for." },
+    { "id": "walkin",    "name": "Walk-in care",        "blurb": "No appointment. Colds, sprains, rashes, infections, stitches." }
+  ]
+}

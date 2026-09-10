@@ -1,0 +1,40 @@
+{
+  "note": "One entry per clinic. hours uses 24h HH:MM; null means closed that day. Order of days is Sun..Sat.",
+  "locations": [
+    { "id": "pilsen", "name": "Pilsen", "address": "1800 S Blue Island Ave", "zip": "60608",
+      "lat": 41.8570, "lng": -87.6580, "phone": "(555) 555-0101",
+      "services": ["primary","peds","dental","behavioral","womens","pharmacy","walkin"],
+      "hours": [null, ["08:00","19:00"], ["08:00","19:00"], ["08:00","19:00"], ["08:00","19:00"], ["08:00","17:00"], ["09:00","14:00"]],
+      "note": "Spanish spoken at every desk." },
+
+    { "id": "uptown", "name": "Uptown", "address": "4700 N Sheridan Rd", "zip": "60640",
+      "lat": 41.9680, "lng": -87.6550, "phone": "(555) 555-0102",
+      "services": ["primary","behavioral","womens","pharmacy","vision","walkin"],
+      "hours": [null, ["07:30","20:00"], ["07:30","20:00"], ["07:30","20:00"], ["07:30","20:00"], ["07:30","18:00"], ["09:00","15:00"]],
+      "note": "Interpretation available in Vietnamese and Amharic." },
+
+    { "id": "austin", "name": "Austin", "address": "5900 W Chicago Ave", "zip": "60651",
+      "lat": 41.8945, "lng": -87.7720, "phone": "(555) 555-0103",
+      "services": ["primary","peds","dental","behavioral","pharmacy"],
+      "hours": [null, ["08:00","18:00"], ["08:00","18:00"], ["08:00","18:00"], ["08:00","18:00"], ["08:00","16:00"], null],
+      "note": "Free shuttle from the Central Green Line stop." },
+
+    { "id": "bronzeville", "name": "Bronzeville", "address": "400 E 47th St", "zip": "60653",
+      "lat": 41.8095, "lng": -87.6165, "phone": "(555) 555-0104",
+      "services": ["primary","peds","womens","behavioral","vision","walkin"],
+      "hours": [["10:00","14:00"], ["08:00","19:00"], ["08:00","19:00"], ["08:00","19:00"], ["08:00","19:00"], ["08:00","17:00"], ["09:00","15:00"]],
+      "note": "Open Sunday mornings for walk-ins." },
+
+    { "id": "belmont", "name": "Belmont Cragin", "address": "5400 W Fullerton Ave", "zip": "60639",
+      "lat": 41.9240, "lng": -87.7600, "phone": "(555) 555-0105",
+      "services": ["primary","peds","dental","pharmacy","vision"],
+      "hours": [null, ["08:30","18:00"], ["08:30","18:00"], ["08:30","18:00"], ["08:30","18:00"], ["08:30","16:00"], null],
+      "note": "Spanish and Polish spoken." },
+
+    { "id": "rogers", "name": "Rogers Park", "address": "1700 W Devon Ave", "zip": "60660",
+      "lat": 41.9980, "lng": -87.6740, "phone": "(555) 555-0106",
+      "services": ["primary","peds","behavioral","womens","walkin"],
+      "hours": [null, ["08:00","18:00"], ["08:00","18:00"], ["08:00","18:00"], ["08:00","18:00"], ["08:00","16:00"], ["10:00","14:00"]],
+      "note": "Interpretation in Urdu, Gujarati and Russian." }
+  ]
+}

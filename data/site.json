@@ -1,0 +1,15 @@
+{
+  "name": "Willow Community Health",
+  "short": "Willow",
+  "tagline": "Six neighborhood clinics",
+  "city": "Chicago",
+  "intro": "Six clinics across the city. We take Medicaid, Medicare, most commercial plans, and we see people with no insurance on a sliding scale. Nobody is turned away for inability to pay.",
+  "mainPhone": "(555) 555-0100",
+  "email": "hello@willowhealth.example",
+  "demo": {
+    "show": true,
+    "text": "Demo site. Willow Community Health is fictional; clinics, hours and phone numbers are invented.",
+    "linkText": "Made by Framework Studio",
+    "url": "https://tahvia127.github.io/framework-studio/"
+  }
+}
